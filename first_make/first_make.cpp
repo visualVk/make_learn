@@ -1,6 +1,7 @@
 #include <iostream>
 #include <thread>
 #include "XData.h"
+#include "test.h"
 using namespace std;
 
 void ThreadMain()
@@ -13,6 +14,5 @@ int main(int argc, char *argv[])
 	thread th(ThreadMain);
 	cout << "first make file" << endl;
 	th.join();
-	XData xdata;
 	return 0;
 }
