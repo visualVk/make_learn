@@ -1,3 +1,4 @@
+#include <cstdio>
 #include <iostream>
 #include <thread>
 #include "XData.h"
@@ -11,8 +12,11 @@ void ThreadMain()
 
 int main(int argc, char *argv[])
 {
+	char path[] = CONFIG;
+	printf("path = %s\n", path);
 	thread th(ThreadMain);
 	cout << "first make file" << endl;
 	th.join();
+	XData *xdata = new XData();
 	return 0;
 }
